@@ -1,0 +1,10 @@
+<ul>
+    {% for item in items %}
+        <li>
+            {{ item.text_field }} - {{ item.number_field }}
+            <a href="{% url 'update_view' item.pk %}">Update</a>
+            <a href="{% url 'delete_view' item.pk %}">Delete</a>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'create_view' %}">Create New</a>
