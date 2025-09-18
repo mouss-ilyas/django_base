@@ -31,3 +31,16 @@ class Article(models.Model):
         permissions = [
             ("can_publish", "Can publish articles"),
         ]
+
+
+"""
+{% if perms.app_name.permission_codename %}
+    <!-- Content to display if the user has the permission -->
+    <p>You have permission to do this!</p>
+    <a href="{% url 'some_view' %}">Do something</a>
+{% else %}
+    <!-- Content to display if the user does not have the permission -->
+    <p>You do not have permission to do this.</p>
+{% endif %}
+
+"""
